@@ -16,12 +16,46 @@ Else
  
 Program:
 
-//type your code here
+#include<stdio.h>  
+  struct eligible{
+  int Age;
+  char name[100];
+  } ;
+  int main()
+Output:
+ Result: Thus, the program is verified successfully.
+ EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND
+ RETURNING A STRUCTURE FROM A FUNCTION Aim: To write a C program for passing
+ structure as function and returning a structure from a function
+ Algorithm:
+ 1. Define structure numbers with members a and b.
+ 2. Declare variable n of type numbers.
+ 3. Prompt the user to enter values for a and b.
+ 4. Input values for a and b into n using scanf.
+ 5. Call the add function with n as an argument.
+ 6. Print the result returned by the add function.
+ 7. Return 0
+ Program:
+```
+  {
+      struct eligible eli;
+      scanf("%d",&eli.Age);
+      printf("Age:%d\n",eli.Age);
+      scanf("%s",eli.name);
+      printf("Name:%svaccine:%d\n",eli.name,eli.Age);
+      if(eli.Age>18)
+      printf("eligibility:yes");
+      else
+      printf("eligibility:no");
+      return 0
+    }
+```
 
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/efe07b9c-c9c3-49cf-ad40-af8b718c8c7e)
+
 
 
 Result:
@@ -43,16 +77,43 @@ Algorithm:
 7.	Return 0
  
 Program:
-
-//type your code here
-
+```
+ #include <stdio.h>
+ struct Point {
+ int x;
+ int y;  
+};
+ void displayPoint(struct Point p)
+ {
+ printf("Point: (%d, %d)\n", p.x, p.y);
+ }
+ struct Point addPoints(struct Point p1, struct Point p2) {
+ struct Point result;
+ result.x = p1.x + p2.x;
+ result.y = p1.y + p2.y;
+ return result;
+ }
+ int main() {
+ struct Point a = {3, 4};
+ struct Point b = {5, 7};
+ printf("Point A: ");
+ displayPoint(a);
+ printf("Point B: ");
+ displayPoint(b);
+ struct Point sum = addPoints(a, b);
+ printf("Sum of A and B: ");
+ displayPoint(sum);
+ return 0;
+ }
+```
 
 
 
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/4f4ef616-389e-4fb9-adad-74833ccb086f)
+
 
 
 
@@ -85,16 +146,30 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
-
+```
+ #include <stdio.h>
+    int main()
+    {
+          FILE*file=fopen("Hospital.txt","w");
+          if(file == NULL)
+          {
+              printf("Error creating file\n");
+              return 1;
+          }
+          printf("File Created Successfully\n");
+          printf("File Opened\n");
+          fclose(file);
+          printf("File Closed\n");
+          return 0;
+    }
+```
 
 
 
 Output:
 
 
-//paste your output here
+![Screenshot 2025-04-25 225425](https://github.com/user-attachments/assets/6a5aa62f-1e70-4598-9b9e-b6e36d21607f)
 
 
 
@@ -133,15 +208,40 @@ Use scanf to input the file name into the name array and the number of strings i
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
 
+int main() {
+    FILE *p;
+    char name[100];
+
+    printf("Enter the file name: ");
+    scanf("%s", name);
+
+    p = fopen(name, "w");
+
+    if (p == NULL) {
+        printf("Error creating file.\n");
+        return 1;
+    }
+
+    printf("File '%s' created successfully.\n", name);
+
+    fclose(p);
+    printf("File closed successfully.\n");
+
+    return 0;
+}
+
+```
 
 
 
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/86e6455b-fbcd-422b-8b2c-b7717aa7c2c1)
+
 
 
 
@@ -187,7 +287,32 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+
+int main() {
+    struct Student s;
+    printf("Enter student name: ");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+    printf("\n--- Student Details ---\n");
+    printf("Name       : %s", s.name);
+    printf("Roll No.   : %d\n", s.roll);
+    printf("Marks      : %.2f\n", s.marks);
+
+    return 0;
+}
+```
 
 
 
@@ -195,7 +320,8 @@ Program:
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/d1f6ccb0-b742-47e3-b313-9ea9afac3e1e)
+
 
 
 
