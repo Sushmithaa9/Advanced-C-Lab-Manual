@@ -13,11 +13,21 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int stack[40],top,i;
+ void display()
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\n",stack[i]);
+}
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/23e0fb04-54d1-4aa5-90a5-103ed27577d4)
+
 
 
 
@@ -36,11 +46,28 @@ Algorithm:
  
 Program:
 
-//type your code here
-
+```
+int size=3,top=1;
+float stack[40];
+void push (float data)
+{
+    if (top==size-1 )
+    {
+        printf("stack is full\n");
+        
+    }
+    else
+    {
+        top ++;
+        stack[top] = data;
+        
+    }
+}
+```
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/8afe34ce-324b-450c-951c-a82141703211)
+
 
 
 
@@ -62,11 +89,31 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int queue[50], rear, front,i;
+void display()
+{
+    if(front==-1)
+    {
+        printf("No elements to display");
+        
+    }
+    else
+    {
+        for(i=front;i<=rear;i++)
+        {
+            printf("%d ",queue[i]);
+            
+        }
+        
+    }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/dcf89449-ac11-4e96-8181-0e0a9c188a19)
+
 
 
 Result:
@@ -86,11 +133,28 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+int size=4, rear=-1, front=-1; 
+float queue[50];
+void enqueue(float data)
+{
+    if(rear<size)
+    {
+        if(front==-1)
+        {
+            front=0;
+        }
+        rear=rear+1;
+        queue[rear]=data;
+        
+    }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/9d195de2-f30a-4f19-9e5e-9854bb8bdf16)
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +185,24 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+```
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else{
+        front=front+1;
+    }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/9ef4a3a0-c242-4396-b0b6-94bf13ea87e5)
+
 
 
 Result:
